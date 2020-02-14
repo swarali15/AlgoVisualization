@@ -1,0 +1,52 @@
+
+:root{
+    
+    --ArrColor:#ed84e9;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#lengthInput
+{margin-top: 5px;
+    padding: 12px;
+}
+
+#AlgoSelector
+{margin-top: 5px;
+    padding: 12px;
+}
+#AlgoSelector:hover{
+    background-color: beige;
+}
+
+#lengthInput :hover{
+     box-shadow: beige;
+}
+
+#colorSelect :hover{
+    box-shadow: beige;
+}
+
+#colorSelect
+{margin-top: 5px;
+    padding: 12px;
+}
+
