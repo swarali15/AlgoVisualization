@@ -32,6 +32,9 @@ li a {
 #AlgoSelector
 {margin-top: 5px;
     padding: 12px;
+    background-color: aqua;
+    display: inline-block;
+    flex-direction: row;
 }
 #AlgoSelector:hover{
     background-color: beige;
@@ -50,3 +53,4 @@ li a {
     padding: 12px;
 }
 
+/**/
