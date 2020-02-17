@@ -1,17 +1,17 @@
-var color=document.getElementById("arrcolor");
 
-window.onload=function(){
     var inputLength = document.getElementById("length");
-var inputLHtag = document.getElementById("ArrayL");
-inputLHtag.innerHTML = inputLength.value;
-
-inputLength.oninput = function() {
-  inputLHtag.innerHTML = this.value;
+    var inputLHtag = document.getElementById("ArrayL");
+    inputLHtag.innerHTML = inputLength.value;
+inputLength.addEventListener("input", GenerateArr);
+                                                                            //  function 1  Generate array & display array
+function GenerateArr()
+{
+inputLHtag.innerHTML = this.value;
     var array=[];
             //removing prevoius blocks
-            var arrContainer=document.getElementById("ArrayDisplay");
-         var child=arrContainer.lastElementChild;
-         while(child)
+        var arrContainer=document.getElementById("ArrayDisplay");
+        var child=arrContainer.lastElementChild;
+        while(child)
              {
                  arrContainer.removeChild(child);
                  child=arrContainer.lastElementChild;
@@ -24,19 +24,29 @@ inputLength.oninput = function() {
          
             array.push(ht);
            var newDiv = document.createElement('div');
-newDiv.style.cssText = 'opacity:0.3;z-index:100; padding:10px;margin:3px;display: inline-block;flex-direction: row';
+            newDiv.style.cssText = 'opacity:0.3;z-index:100; padding:10px;margin:3px;display: inline-block;flex-direction: row;';
             newDiv.style.backgroundColor=document.getElementById("arrcolor").value;
             newDiv.style.height= ht;
-            newDiv.style.width=1/(num^2);
-document.getElementById("ArrayDisplay").appendChild(newDiv);
+            newDiv.style.width=1/(num*200);
+            document.getElementById("ArrayDisplay").appendChild(newDiv);
             //var containerArr=window.document.getElementById("ArrayDisplay");
             //containerArr.appendChild('newDiv');
-            
         }
-    inputLHtag.innerHTML = array;
-}
+    
+    return array;
+    
+}//end of func 1 generate arr
 
-}
+document.getElementById('bubble').addEventListener("click",function()
+        {//var array=GenerateArr();
+        
+        document.getElementById('HelooFUnctionRun').innerHTML=array;
+    
+    })
+
+
+
+
 //console.log(array);
 
 
